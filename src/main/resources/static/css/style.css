@@ -1,5 +1,5 @@
 :root{
-    --bg-color: #d6b3a7c0;
+    --bg-color: #e0d4d05e;
     --primary-color: #441E16;
     --secondary-color: #CCCCFF;
     --tertiary-color: #63A7E1;
@@ -18,8 +18,13 @@ header{
  background-color: var(--tertiary-color);
 } 
 
+iframe{
+    width: 50%;
+}
+
+
 video{
-    background-color: yellow;
+    background-color:rgb(161, 161, 131);
 }
 
 body{

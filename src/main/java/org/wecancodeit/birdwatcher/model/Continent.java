@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package org.wecancodeit.birdwatcher.model;
 
 import javax.persistence.*;
 import java.util.Collection;

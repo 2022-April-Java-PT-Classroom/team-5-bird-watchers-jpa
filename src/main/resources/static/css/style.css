@@ -1,6 +1,6 @@
 :root{
-    --bg-color: #e0d4d05e;
-    --primary-color: #441E16;
+    --bg-color: #ebfafa86;
+    --primary-color: rgb(64,75,80);
     --secondary-color: #CCCCFF;
     --tertiary-color: #63A7E1;
     font-family: sans-serif;
@@ -8,24 +8,32 @@
 
 #navBar, #navBar *{
     background-color: var(--primary-color);
+    margin: 0 auto;
+   
+
 }
 
 #navBar a{
+    padding: 1em 2em;
+    text-decoration: none;
     color: var(--secondary-color);
+    font-size: 1em;
 }
 
-header{
- background-color: var(--tertiary-color);
+header h1{
+    margin: 0;
+    flex: auto;
+
 } 
-
-iframe{
-    width: 50%;
+.wrapper{
+    margin-left: auto;
+}
+.videowrapper{
+    width: 100%;
+    height: 100%;
 }
 
 
-video{
-    background-color:rgb(161, 161, 131);
-}
 
 body{
     background-color: var(--bg-color);

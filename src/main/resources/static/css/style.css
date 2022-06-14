@@ -1,3 +1,4 @@
+
 :root{
     --bg-color: #d6b3a7c0;
     --primary-color: #441E16;
@@ -24,4 +25,32 @@ video{
 
 body{
     background-color: var(--bg-color);
+
+:root{
+    --bg-color: #d6b3a7c0;
+    --primary-color: #441E16;
+    --secondary-color: #CCCCFF;
+    --tertiary-color: #63A7E1;
+    font-family: sans-serif;
+}
+
+#navBar, #navBar *{
+    background-color: var(--primary-color);
+}
+
+#navBar a{
+    color: var(--secondary-color);
+}
+
+header{
+ background-color: var(--tertiary-color);
+} 
+
+video{
+    background-color: yellow;
+}
+
+body{
+    background-color: var(--bg-color);
+
 }

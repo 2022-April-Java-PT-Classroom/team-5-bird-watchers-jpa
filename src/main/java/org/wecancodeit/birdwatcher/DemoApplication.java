@@ -1,4 +1,4 @@
-package com.example.demo;
+package org.wecancodeit.birdwatcher;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

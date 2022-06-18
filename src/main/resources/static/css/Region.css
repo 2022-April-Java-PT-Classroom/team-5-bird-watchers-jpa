@@ -5,11 +5,12 @@
     --tertiary-color: #63A7E1;
     font-family: sans-serif;
 }
-
 #navBar,
 #navBar * {
     background-color: var(--primary-color);
     margin: 0 auto;
+
+
 }
 
 #navBar a {
@@ -18,27 +19,23 @@
     color: var(--secondary-color);
     font-size: 1em;
 }
-
 h1 {
     margin: 0;
     text-align: center;
     flex: auto;
 
 }
-#intro {
-    padding-top: 2em;
-    padding-left: 10em;
-    padding-right: 10em;
-    padding-bottom: 1em;
-    font-family: sans-serif;
-    text-align: justify;
-    block-size: auto;
-    letter-spacing: 2px;
-
+#intro P{
+    
 }
-#southAmericaP{
-    text-align: left;
-    margin: 0;
-    margin-top: 5em;
-    padding-left: 7em;
+body {
+    background-color: var(--bg-color);
+}
+footer {
+    justify-content: center;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    background-color: rgb(64, 75, 80);
+    color: cornflowerblue;
 }

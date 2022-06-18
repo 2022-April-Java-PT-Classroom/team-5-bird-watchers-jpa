@@ -1,7 +1,8 @@
 package org.wecancodeit.birdwatcher.repo;
 
 import org.springframework.data.repository.CrudRepository;
-import javax.swing.plaf.synth.Region;
+import org.wecancodeit.birdwatcher.model.regionModel;
 
-public interface RegionRepository extends CrudRepository<Region,Long> {
+
+public interface RegionRepository extends CrudRepository<regionModel,Long> {
 }

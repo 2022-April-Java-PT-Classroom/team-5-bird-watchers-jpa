@@ -1,10 +1,7 @@
 package org.wecancodeit.birdwatcher.model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.Objects;
 
 @Entity
 public class regionModel {
@@ -20,7 +17,7 @@ public class regionModel {
     private String climate;
 
     @OneToOne
-    private Continent continent;
+    private ContinentModel continentModel;
     @OneToMany
     private Collection<countriesModel> countries;
 

@@ -18,7 +18,7 @@ public class habitatController {
     @RequestMapping("/habitats")
     public String displayHabitats (Model model){
         model.addAttribute("habitats", habitatRepo.findAll());
-        return "habitatsView";
+        return "habitatsTemplate";
     }
 
     @GetMapping("/habitats/{id}")

@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Entity
-public class Continent {
+public class ContinentModel {
     @Id @GeneratedValue
     private Long id;
     private String name;
@@ -16,9 +16,9 @@ public class Continent {
     @OneToMany(mappedBy = "continent")
     private Collection<countriesModel> countries;
 
-    protected Continent(){}
+    protected ContinentModel(){}
 
-    public Continent(String name, String description, String imageUrl, countriesModel...countries) {
+    public ContinentModel(String name, String description, String imageUrl, countriesModel...countries) {
         this.name = name;
         this.description = description;
         this.imageUrl = imageUrl;
@@ -45,9 +45,9 @@ public class Continent {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Continent)) return false;
-        Continent continent = (Continent) o;
-        return Objects.equals(id, continent.id) && Objects.equals(name, continent.name);
+        if (!(o instanceof ContinentModel)) return false;
+        ContinentModel continentModel = (ContinentModel) o;
+        return Objects.equals(id, continentModel.id) && Objects.equals(name, continentModel.name);
     }
 
     @Override

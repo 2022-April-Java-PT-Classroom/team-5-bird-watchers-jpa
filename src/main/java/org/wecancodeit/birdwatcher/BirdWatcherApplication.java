@@ -9,4 +9,4 @@ public class BirdWatcherApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BirdWatcherApplication.class, args);
 
-}
+

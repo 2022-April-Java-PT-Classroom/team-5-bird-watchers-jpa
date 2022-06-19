@@ -1,13 +1,11 @@
 package org.wecancodeit.birdwatcher.model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-public class countriesModel {
+public class Countries {
 
     @Id
     @GeneratedValue
@@ -15,10 +13,10 @@ public class countriesModel {
     private String countryName;
     private String description;
     private String imageUrl;
-    @ManyToOne()
+    @ManyToOne
     private Continent continent; //once continent class is merged, import the class.
-    @ManyToMany
-    private Collection<regionModel> regions; //couldn't see where Region class was at, so I left it red.
+//    @ManyToMany
+    private Region regions; //couldn't see where Region class was at, so I left it red.
 
     public Long getId(){
         return id;
@@ -40,29 +38,29 @@ public class countriesModel {
         return continent;
     }
 
-    public Collection<regionModel> getRegions(){
+    public Region getRegions(){
         return regions;
     }
 
-    public countriesModel(){
+    public Countries(){
 
     }
 
-    public countriesModel(Long id, String countryName, String description, String imageUrl, Continent continent, regionModel ... regions){
+    public Countries(Long id, String countryName, String description, String imageUrl, Continent continent, Region regions){
         this.id = id;
         this.countryName = countryName;
         this.description = description;
         this.imageUrl = imageUrl;
         this.continent = continent;
-        this.regions = new ArrayList<>(Arrays.asList(regions));
+        this.regions = regions;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        countriesModel CountriesModel = (countriesModel) o;
-        return Objects.equals(id, CountriesModel.id);
+        Countries Countries = (Countries) o;
+        return Objects.equals(id, Countries.id);
     }
 
     @Override

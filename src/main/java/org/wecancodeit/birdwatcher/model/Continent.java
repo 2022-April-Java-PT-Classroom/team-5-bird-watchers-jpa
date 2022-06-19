@@ -13,12 +13,12 @@ public class Continent {
     @Lob
     private String description;
     private String imageUrl;
-    @OneToMany(mappedBy = "continent")
-    private Collection<countriesModel> countries;
+    @OneToMany(mappedBy = "Countries")
+    private Collection<Countries> countries;
 
     protected Continent(){}
 
-    public Continent(String name, String description, String imageUrl, countriesModel...countries) {
+    public Continent(String name, String description, String imageUrl, Countries...countries) {
         this.name = name;
         this.description = description;
         this.imageUrl = imageUrl;
@@ -33,7 +33,7 @@ public class Continent {
 
     public String getImageUrl() {return imageUrl;}
 
-    public Collection<countriesModel> getCountries() {
+    public Collection<Countries> getCountries() {
         return countries;
     }
 

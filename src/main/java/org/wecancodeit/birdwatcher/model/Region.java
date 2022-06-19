@@ -3,7 +3,7 @@ package org.wecancodeit.birdwatcher.model;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-public class regionModel {
+public class Region {
 
     @Id
     @GeneratedValue
@@ -14,7 +14,7 @@ public class regionModel {
     private String climate;
 
     //Constructor
-    public regionModel(String regionName, String countryName, String population, String climate) {
+    public Region(String regionName, String countryName, String population, String climate) {
         this.regionName = regionName;
         this.countryName = countryName;
         this.population = population;

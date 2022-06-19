@@ -2,6 +2,7 @@ package org.wecancodeit.birdwatcher.model;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.Objects;
 
 @Entity
 public class regionModel {
@@ -52,14 +53,16 @@ public class regionModel {
     public String getClimate() {return climate;}
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        regionModel regionModel = (regionModel) o;
+        return Objects.equals(id, regionModel.id);
+    }
 
-//    @Override
-//    public boolean equals(Object o){
-//        if (this == o)return true;
-//        if (o == null || getClass() !=o.getClass()) return false;
-//        regionModel RegionModel = (regionModel) o;
-//        return Object.equals(id, RegionModel.id);
-//    }
-//    @Override
-//    public int hashCode(){ return Object.hash(id);}
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 }

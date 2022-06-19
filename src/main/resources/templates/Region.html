@@ -19,6 +19,11 @@
     <h1>Patagonia</h1>
 </header>
 <main>
+    <div>
+        <ul>
+            <li th:each="region: ${regions}"><a th:href="@{/region(id=${region.id})}" th:text="${region.regionName}">Region Name...</a></li>
+        </ul>
+    </div>
     <div id="intro">
         <h2>Patagonia Exotic Bird watching </h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor id eu nisl nunc mi. Aenean sed adipiscing diam donec. Turpis nunc eget lorem dolor. Accumsan tortor posuere ac ut consequvideosat semper. Donec ultrices tincidunt arcu non sodales neque. Semper quis lectus nulla at volutpat diam ut venenatis. Sit amet venenatis urna cursus eget nunc scelerisque viverra mauris. Egestas egestas fringilla phasellus faucibus. In vitae turpis massa sed elementum tempus. Mi quis hendrerit dolor magna eget est. Augue interdum velit euismod in pellentesque massa placerat duis ultricies. Quis lectus nulla at volutpat diam ut. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Eget nulla facilisi etiam dignissim diam. Blandit volutpat maecenas volutpat blandit. Accumsan tortor posuere ac ut. Non pulvinar neque laoreet suspendisse. Pellentesque massa placerat duis ultricies lacus sed turpis. Consectetur adipiscing elit ut aliquam purus.</p>

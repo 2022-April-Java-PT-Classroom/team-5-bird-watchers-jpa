@@ -19,7 +19,7 @@ public class countriesController {
     @RequestMapping("/countries")
     public String displayCountries (Model model){
         model.addAttribute("countries", countriesRepo.findAll());
-        return "countriesView";
+        return "countriesTemplate";
     }
 
     @GetMapping("/countries/{id}")

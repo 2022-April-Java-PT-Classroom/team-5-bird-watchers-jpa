@@ -2,21 +2,16 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title th:text="${bird.name}">Bird Name ...</title>
+    <title>Birds</title>
 </head>
 <body>
     <header>
-        <h1 th:text="${bird.name}">Bird Name ...</h1>
+        <h1>Birds</h1>
     </header>
     <div>
-        <img th:src="'/images/Birds/' + ${bird.imageUrl}">
-        <p th:text="${bird.description}"></p>
-        <div>
-            <h2>Habitats</h2>
-            <ul>
-                <li th:each="habitat: ${bird.habitats}"><a th:href="@{/habitats/${habitat.id}}" th:text="${habitat.habitatName}">Habitat Name...</a></li>
-            </ul>
-        </div>
+        <ul>
+            <li th:each="bird: ${birds}"><a th:href="@{/bird(id=${bird.id})}" th:text="${bird.name}">Bird Name...</a></li>
+        </ul>
     </div>
     <Footer>JAC Enterprises 2022</Footer>
 </body>

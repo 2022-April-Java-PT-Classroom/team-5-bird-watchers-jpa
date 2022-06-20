@@ -15,8 +15,8 @@ public class countriesModel {
     private String countryName;
     private String description;
     private String imageUrl;
-    @ManyToOne()
-    private ContinentModel continentModel; //once continent class is merged, import the class.
+    @ManyToOne
+    private ContinentModel continent; //once continent class is merged, import the class.
     @ManyToMany
     private Collection<regionModel> regions; //couldn't see where Region class was at, so I left it red.
 
@@ -37,7 +37,7 @@ public class countriesModel {
     }
 
     public ContinentModel getContinent(){
-        return continentModel;
+        return continent;
     }
 
     public Collection<regionModel> getRegions(){
@@ -48,12 +48,12 @@ public class countriesModel {
 
     }
 
-    public countriesModel(Long id, String countryName, String description, String imageUrl, ContinentModel continentModel, regionModel ... regions){
+    public countriesModel(Long id, String countryName, String description, String imageUrl, ContinentModel continent, regionModel ... regions){
         this.id = id;
         this.countryName = countryName;
         this.description = description;
         this.imageUrl = imageUrl;
-        this.continentModel = continentModel;
+        this.continent = continent;
         this.regions = new ArrayList<>(Arrays.asList(regions));
     }
 

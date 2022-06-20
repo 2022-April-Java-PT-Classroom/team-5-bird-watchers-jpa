@@ -15,7 +15,8 @@ public class habitatModel {
     private String habitatName;
     private String description;
     private String imageUrl;
-    @ManyToOne()
+
+    @ManyToOne
     private Region region;
     @ManyToMany
     private Collection<BirdModel> birds;
@@ -35,7 +36,7 @@ public class habitatModel {
     public String getImageUrl(){
         return imageUrl;
     }
-    public Region getRegion(){
+    public regionModel getRegion(){
         return region;
     }
 
@@ -47,7 +48,9 @@ public class habitatModel {
 
     }
 
+
     public habitatModel(Long id, String habitatName, String description, String imageUrl, Region region, BirdModel... birds){
+
        this.id = id;
        this.habitatName = habitatName;
        this.description = description;

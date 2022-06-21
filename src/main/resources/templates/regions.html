@@ -20,7 +20,7 @@
     <div>
         <div class="grid">
         <ul>
-            <li th:each="region: ${regions}"><a th:href="@{/region(id=${region.id})}" th:text="${region.regionName}">Region Name...</a></li>
+            <li th:each="region: ${regions}"><a th:href="@{/region(id=${region.id})}" th:text="${region.regionName}"></a></li>
         </ul>
         </div>
     </div>

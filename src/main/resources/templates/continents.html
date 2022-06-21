@@ -11,6 +11,10 @@
         <h1>Continents Available for Bird Watching</h1>
     </header>
     <div>
+        <nav id="navBar">
+            <a href="home">Home</a>
+            <a href="regions">Regions of South America</a>
+        </nav>
         <ul>
             <li th:each="continent: ${continents}"><a th:href="@{/continent(id=${continent.id})}" th:text="${continent.name}">Continent Name...</a></li>
         </ul>

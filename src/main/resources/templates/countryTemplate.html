@@ -2,10 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country</title>
 </head>
 <body>
-
-<footer>Jac Enterprises 2022</footer>
+<header>
+    <h1>Country Available for Bird Watching</h1>
+</header>
+<div>
+    <ul>
+        <li th:each="country: ${countries}"><a th:href="@{/country(id=${country.id})}" th:text="${country.name}">Country  Name...</a></li>
+    </ul>
+</div>
+<Footer>JAC Enterprises 2022</Footer>
 </body>
 </html>

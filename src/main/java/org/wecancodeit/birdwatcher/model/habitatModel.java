@@ -3,6 +3,7 @@ package org.wecancodeit.birdwatcher.model;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -14,10 +15,11 @@ public class habitatModel {
     private String habitatName;
     private String description;
     private String imageUrl;
+
     @ManyToOne
-    private regionModel region;
-//    @ManyToMany
-//    private Collection<birdModel> birds;
+    private Region region;
+    @ManyToMany
+    private Collection<BirdModel> birds;
 
     private Long getId(){
         return id;
@@ -38,21 +40,23 @@ public class habitatModel {
         return region;
     }
 
-//    public Collection<birdModel> getBirds() {
-//        return birds;
-//    }
+    public Collection<BirdModel> getBirds() {
+        return birds;
+    }
 
     public habitatModel(){
 
     }
 
-    public habitatModel(Long id, String habitatName, String description, String imageUrl, regionModel region){
+
+    public habitatModel(Long id, String habitatName, String description, String imageUrl, Region region, BirdModel... birds){
+
        this.id = id;
        this.habitatName = habitatName;
        this.description = description;
        this.imageUrl = imageUrl;
        this.region = region;
-//       this.birds = new ArrayList<>(Arrays.asList(birds));
+       this.birds = new ArrayList<>(Arrays.asList(birds));
     }
 
     @Override

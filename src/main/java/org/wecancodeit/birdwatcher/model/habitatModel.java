@@ -14,10 +14,10 @@ public class habitatModel {
     private String habitatName;
     private String description;
     private String imageUrl;
-    @ManyToOne()
-    private Region region;
-    @ManyToMany
-    private Collection<birdModel> birds;
+    @ManyToOne
+    private regionModel region;
+//    @ManyToMany
+//    private Collection<birdModel> birds;
 
     private Long getId(){
         return id;
@@ -34,25 +34,25 @@ public class habitatModel {
     public String getImageUrl(){
         return imageUrl;
     }
-    public Region getRegion(){
+    public regionModel getRegion(){
         return region;
     }
 
-    public Collection<birdModel> getBirds() {
-        return birds;
-    }
+//    public Collection<birdModel> getBirds() {
+//        return birds;
+//    }
 
     public habitatModel(){
 
     }
 
-    public habitatModel(Long id, String habitatName, String description, String imageUrl, Region region, birdModel ... birds){
+    public habitatModel(Long id, String habitatName, String description, String imageUrl, regionModel region){
        this.id = id;
        this.habitatName = habitatName;
        this.description = description;
        this.imageUrl = imageUrl;
        this.region = region;
-       this.birds = new ArrayList<>(Arrays.asList(birds));
+//       this.birds = new ArrayList<>(Arrays.asList(birds));
     }
 
     @Override

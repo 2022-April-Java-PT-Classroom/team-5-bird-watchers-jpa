@@ -25,6 +25,6 @@ public class countriesController {
     @GetMapping("/countries/{id}")
     public String findOneCountry(@PathVariable Long id, Model model){
         model.addAttribute("countriesModel", countriesRepo.findById(id).get());
-        return "countriesTemplate";
+        return "countryTemplate";
     }
 }

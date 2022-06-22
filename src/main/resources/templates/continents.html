@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/css/landingLayout.css">
-    <link rel="stylesheet" href="../style/css/countries.css">
-    <title>Continents</title>
+
+
+    <link rel="stylesheet" th:href="@{css/style.css}">
+    <link rel="stylesheet" th:href="@{css/landingLayout.css}">
+
 </head>
 <body>
     <header>
         <h1>Continents Available for Bird Watching</h1>
     </header>
     <div>
+        <nav id="navBar">
+            <a href="home">Home</a>
+            <a href="regions">Regions of South America</a>
+        </nav>
         <ul>
             <li th:each="continent: ${continents}"><a th:href="@{/continent(id=${continent.id})}" th:text="${continent.name}">Continent Name...</a></li>
         </ul>

@@ -17,8 +17,12 @@ public class Populator implements CommandLineRunner {
     @Override
     public void run(String...args) throws Exception {
 
-        regionModel theAndes = new regionModel("The Andes","test ","45445 "," 103.4","src/main/resources/static/images/jactlogo.jpg ");
-        regionRepo.save(theAndes);
+
+
+
+        regionModel aysen = new regionModel("Aysen", "Chile", "102,317", "test text", "static/images/Province/Aysen_Chile/Aysen.jpg");
+        regionRepo.save(aysen);
+//
 
 //        regionModel theNorth = new regionModel("The North");
 //        regionRepo.save(theAndes);

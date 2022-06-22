@@ -39,3 +39,20 @@ footer {
     background-color: rgb(64, 75, 80);
     color: cornflowerblue;
 }
+
+.grid{
+    display: grid;
+    height: 75vh;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    border: 1px solid red;
+    overflow-y: auto;
+ }
+ .grid-item {
+   background-color: rgba(255, 255, 255, 0.8);
+   border: 1px solid rgba(0, 0, 0, 0.8);
+   padding: 20px;
+   font-size: 30px;
+   text-align: center;
+ }
+

@@ -18,19 +18,18 @@ public class Populator implements CommandLineRunner {
     public void run(String...args) throws Exception {
 
 
+        regionModel patagonia = new regionModel("Patagonia","Argentina", "About 2 Million","cold and dry", "Image");
+        regionRepo.save(patagonia);
 
-
-        regionModel aysen = new regionModel("Aysen", "Chile", "102,317", "test text", "static/images/Province/Aysen_Chile/Aysen.jpg");
+        regionModel aysen = new regionModel("Aysen", "Chile", "102,317", "Cool Oceanic", "static/images/Province/Aysen_Chile/Aysen.jpg");
         regionRepo.save(aysen);
-//
 
-//        regionModel theNorth = new regionModel("The North");
-//        regionRepo.save(theAndes);
-//
-//        regionModel thePampas = new regionModel("The Pampas");
-//        regionRepo.save(thePampas);
-//
-//        regionModel patagonia = new regionModel("Patagonia");
-//        regionRepo.save(patagonia);
+        regionModel losLagos = new regionModel("Los Lagos","Chile", "823,204", "Tropical Savanna", "Image");
+        regionRepo.save(losLagos);
+
+        regionModel magallanes = new regionModel("Magallanes", "Chile", "165,5932", "Tundra", "Image");
+        regionRepo.save(magallanes);
+
+
     }
 }

@@ -20,7 +20,7 @@ public class Populator implements CommandLineRunner {
         regionModel patagonia = new regionModel("Patagonia","Argentina", "About 2 Million","cold and dry", "Image");
         regionRepo.save(patagonia);
 
-        regionModel aysen = new regionModel("Aysen", "Chile", "102,317", "Cool Oceanic", "Image");
+        regionModel aysen = new regionModel("Aysen", "Chile", "102,317", "Cool Oceanic", "static/images/Province/Aysen_Chile/Aysen.jpg");
         regionRepo.save(aysen);
 
         regionModel losLagos = new regionModel("Los Lagos","Chile", "823,204", "Tropical Savanna", "Image");
@@ -28,7 +28,6 @@ public class Populator implements CommandLineRunner {
 
         regionModel magallanes = new regionModel("Magallanes", "Chile", "165,5932", "Tundra", "Image");
         regionRepo.save(magallanes);
-
 
     }
 }

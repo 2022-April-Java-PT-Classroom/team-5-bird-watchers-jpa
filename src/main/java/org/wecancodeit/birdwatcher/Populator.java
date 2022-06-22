@@ -17,6 +17,7 @@ public class Populator implements CommandLineRunner {
     @Override
     public void run(String...args) throws Exception {
 
+
         regionModel patagonia = new regionModel("Patagonia","Argentina", "About 2 Million","cold and dry", "Image");
         regionRepo.save(patagonia);
 
@@ -28,6 +29,7 @@ public class Populator implements CommandLineRunner {
 
         regionModel magallanes = new regionModel("Magallanes", "Chile", "165,5932", "Tundra", "Image");
         regionRepo.save(magallanes);
+
 
     }
 }

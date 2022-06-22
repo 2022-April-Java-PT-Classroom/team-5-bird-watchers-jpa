@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link rel="stylesheet" th:href="@{css/style.css}">
-    <link rel="stylesheet" th:href="@{css/landingLayout.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css }" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/landingLayout.css}">
   
 
     <title>JAC's Twitchers</title>
@@ -48,16 +48,55 @@
             <p id="AboutP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur lorem donec massa sapien faucibus. Sit amet consectetur adipiscing elit pellentesque. Tellus at urna condimentum mattis pellentesque id. Libero volutpat sed cras ornare arcu.
              Aliquam nulla facilisi cras fermentum odio. Turpis egestas sed tempus urna et pharetra pharetra massa massa. Scelerisque fermentum dui faucibus in ornare quam. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. Faucibus pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Etiam non quam lacus suspendisse faucibus interdum.</p>
 
-            <div id="AboutPhotos">
-                <figure>
-            <img src="..\static\images\jactlogo.jpg">
-                </figure>
-            <img src="\images\jactlogo.jpg">
-            <img src="\images\jactlogo.jpg">
-            <img src="\images\jactlogo.jpg">
-            <img src="\images\jactlogo.jpg">
-            <img src="\images\jactlogo.jpg">
+            <div class="containerTeam">
+                <h3> The Team </h3>
+                <h4>meet the Team behind the magic</h4>
             </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="\images\victorpic.png">
+                        <img src="\images\victorpic.png" alt="Victor Grullon" width="200" height="200">
+                    </a>
+                    <div class="desc">Victor Grullon FullStack Software Developer</div>
+                </div>
+            </div>
+
+
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="\images\pennypic.jpg">
+                        <img src="\images\pennypic.jpg" alt="Penny"width="200" height="200">
+                    </a>
+                    <div class="desc">Penny Schuenke FullStack Software Developer</div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="\images\jactlogo.jpg">
+                        <img src="\images\jactlogo.jpg" alt="Jamie Barr"width="200" height="200">
+                    </a>
+                    <div class="desc">Jamie Barr FullStack Software Developer</div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="\images\jactlogo.jpg">
+                        <img src="\images\jactlogo.jpg" alt="Jason Mirwald"width="200" height="200" >
+                    </a>
+                    <div class="desc">Jason Mirwald FullStack Software Developer</div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div style="padding:6px;">
+
+            </div>
+
+
+
 
         </div>
         

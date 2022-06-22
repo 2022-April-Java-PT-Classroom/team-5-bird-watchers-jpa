@@ -45,7 +45,7 @@ footer {
     height: 75vh;
     grid-template-columns: auto auto auto;
     padding: 10px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     overflow-y: auto;
  }
  .grid-item {

@@ -1,54 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/css/landingLayout.css">
-    <link rel="stylesheet" href="../style/css/Regions.css">
+    <link rel="stylesheet" th:href="@{css/style.css}">
+    <link rel="stylesheet" th:href="@{css/landingLayout.css}">
     <title>Regions</title>
 </head>
 <body>
 <nav id="navBar">
 <!--    fixed  home button  was landing.html now home-->
 <a href="home">Home</a>
-<a href="#Patagonia">Patagonia</a>
-<a href="#Countries">Countries</a>
+<a href="continents">Countries</a>
+    <a href="regions">Regions</a>
 
 </nav>
 <header>
-    <h1>Patagonia</h1>
+    <h1 th:text="${region.regionName}"></h1>
 </header>
 <main>
     <div id="intro">
-        <h2>Patagonia Exotic Bird watching </h2>
+        <h2>Lorem ipsum</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor id eu nisl nunc mi. Aenean sed adipiscing diam donec. Turpis nunc eget lorem dolor. Accumsan tortor posuere ac ut consequvideosat semper. Donec ultrices tincidunt arcu non sodales neque. Semper quis lectus nulla at volutpat diam ut venenatis. Sit amet venenatis urna cursus eget nunc scelerisque viverra mauris. Egestas egestas fringilla phasellus faucibus. In vitae turpis massa sed elementum tempus. Mi quis hendrerit dolor magna eget est. Augue interdum velit euismod in pellentesque massa placerat duis ultricies. Quis lectus nulla at volutpat diam ut. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Eget nulla facilisi etiam dignissim diam. Blandit volutpat maecenas volutpat blandit. Accumsan tortor posuere ac ut. Non pulvinar neque laoreet suspendisse. Pellentesque massa placerat duis ultricies lacus sed turpis. Consectetur adipiscing elit ut aliquam purus.</p>
     </div>
     <div id="Patagonia">
-        <h2 id="PatagoniaTitle">Patagonia</h2>
+        <h2 id="PatagoniaTitle">Lorem ipsum</h2>
 
         <p id="PatagoniaP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur lorem donec massa sapien faucibus. Sit amet consectetur adipiscing elit pellentesque. Tellus at urna condimentum mattis pellentesque id. Libero volutpat sed cras ornare arcu.
             Aliquam nulla facilisi cras fermentum odio. Turpis egestas sed tempus urna et pharetra pharetra massa massa. Scelerisque fermentum dui faucibus in ornare quam. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. Faucibus pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Etiam non quam lacus suspendisse faucibus interdum.</p>
 
         <div id="PatagoniaPhotos">
             <figure>
-                <img src="../static/images/jactlogo.jpg">
-                <img src="../static/images/jactlogo.jpg">
-                <img src="../static/images/jactlogo.jpg">
+                <img th:src="${region.imageUrl}" alt="No Image">
+                <img src="/images/jactlogo.jpg">
             </figure>
         </div>
     </div>
     <div id="Regions">
-        <h2 id="CountriesTitle">Countries</h2>
+        <h2 id="CountriesTitle">Lorem ipsum</h2>
 
         <p id="CountryP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur lorem donec massa sapien faucibus. Sit amet consectetur adipiscing elit pellentesque. Tellus at urna condimentum mattis pellentesque id. Libero volutpat sed cras ornare arcu.
             Aliquam nulla facilisi cras fermentum odio. Turpis egestas sed tempus urna et pharetra pharetra massa massa. Scelerisque fermentum dui faucibus in ornare quam. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. Faucibus pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Etiam non quam lacus suspendisse faucibus interdum.</p>
 
         <div id="CountryPhotos">
             <figure>
-                <img src="../static/images/jactlogo.jpg">
-                <img src="../static/images/jactlogo.jpg">
-                <img src="../static/images/jactlogo.jpg">
+                <img src="/images/jactlogo.jpg">
+                <img src="/images/jactlogo.jpg">
+                <img src="/images/jactlogo.jpg">
 
             </figure>
 

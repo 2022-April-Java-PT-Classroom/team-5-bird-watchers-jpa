@@ -8,17 +8,29 @@
 <!--    <link rel="stylesheet" href="../style/css/landingLayout.css">-->
     <link rel="stylesheet" th:href="@{css/style.css}">
     <link rel="stylesheet" th:href="@{css/landingLayout.css}">
-    <title>${habitatModel.habitatName}</title>
+    <title th:text="${habitatModel.habitatName}"></title>
 </head>
 <body>
 <header>
     <nav id="navBar">
         <a href="continents">Continent List</a>
-        <a href="habitatsTemplate">Habitats</a>
+        <a href="countries">Countries List</a>
+        <a href="habitats">Habitat List</a>
     </nav>
-    <h1>Habitat for Bird Watching</h1>
+    <h1 th:text="${habitatModel.habitatName}"></h1>
 </header>
-
+<main>
+    <div>
+        <img th:src="${habitatModel.imageUrl}">
+        <p th:text="${habitatModel.description}"></p>
+    </div>
+    <div>
+        <h2 th:text="'Birds found in ' + ${habitatModel.habitatName}"></h2>
+        <ul>
+            <li th:each="bird: ${habitatModel.birds}"><a th:href="@{/bird(id=${bird.id})}" th:text="${bird.name}"></a></li>
+        </ul>
+    </div>
+</main>
 <Footer>JAC Enterprises 2022</Footer>
 </body>
 </html>

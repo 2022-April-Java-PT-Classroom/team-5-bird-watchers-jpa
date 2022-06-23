@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import org.springframework.web.bind.annotation.RequestParam;
 import org.wecancodeit.birdwatcher.repo.countriesRepository;
 
 import javax.annotation.Resource;
@@ -22,8 +23,8 @@ public class countriesController {
         return "countriesTemplate";
     }
 
-    @GetMapping("/countries/{id}")
-    public String findOneCountry(@PathVariable Long id, Model model){
+    @GetMapping("/country")
+    public String findOneCountry(@RequestParam(value = "id") Long id, Model model){
         model.addAttribute("countriesModel", countriesRepo.findById(id).get());
         return "countryTemplate";
     }

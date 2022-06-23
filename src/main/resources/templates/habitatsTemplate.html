@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/css/habitat.css">
-    <link rel="stylesheet" href="../style/css/landingLayout.css">
-  
-    <title>Habitats</title>
+
+<!--    <link rel="stylesheet" href="../style/css/style.css">-->
+<!--    <link rel="stylesheet" href="../style/css/habitat.css">-->
+<!--    <link rel="stylesheet" href="../style/css/landingLayout.css">-->
+    <link rel="stylesheet" th:href="@{css/style.css}">
+    <link rel="stylesheet" th:href="@{css/landingLayout.css}">
+
+    <title>Habitats Of Birds</title>
 </head>
 <body>
+<header>
 <h1>Habitats</h1>
+
 <nav id="navBar">
     <a href="#top">Home</a>
-    <a href="#birds">Brirds</a>
+    <a href="birds">Birds</a>
     <a href="continents">Continents</a>
 </nav>
-<header>
+</header>
     <div class="grid">
         <ul>
-            <li th:each="habitat: ${habitats}"><a th:href="@{/habitat(id=${habitat.id})}" th:text="${habitat.habitatName}"></a></li>
+            <li th:each="habitat: ${habitats}">
+                <a th:href="@{/habitat(id=${habitat.id})}" th:text="${habitat.habitatName}"></a>
+            </li>
         </ul>
     </div>
 
-</header>
+
 <Footer>JAC Enterprises 2022</Footer>
 </body>
 </html>

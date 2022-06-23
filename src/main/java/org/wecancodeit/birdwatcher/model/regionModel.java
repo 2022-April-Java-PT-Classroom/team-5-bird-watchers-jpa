@@ -1,6 +1,8 @@
 package org.wecancodeit.birdwatcher.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -18,18 +20,18 @@ public class regionModel {
     private String climate;
 
     @OneToOne
-    private ContinentModel continentModel;
+    private countriesModel countries;
     @OneToMany
-    private Collection<countriesModel> countries;
+    private Collection<habitatModel> habitats;
 
     //Constructor
-    public regionModel(String regionName, String countryName, String population, String climate,String imageUrl,regionModel...regions) {
+    public regionModel(String regionName, String countryName, String population, String climate,String imageUrl,countriesModel countries, habitatModel ... habitats) {
         this.regionName = regionName;
         this.countryName = countryName;
         this.population = population;
         this.climate = climate;
         this.imageUrl= imageUrl;
-//        this.countries= new ArrayList<>(Arrays.asList(countries));
+        this.habitats= new ArrayList<>(Arrays.asList(habitats));
     }
    public regionModel(){}
 

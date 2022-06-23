@@ -2,15 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{css/style.css}">
+    <link rel="stylesheet" th:href="@{css/landingLayout.css}">
     <title>Birds</title>
 </head>
 <body>
     <header>
+        <nav id="navBar">
+            <a href="home">Home</a>
+            <a href="continents">Continents</a>
+        </nav>
         <h1>Birds</h1>
     </header>
     <div>
         <ul>
-            <li th:each="bird: ${birds}"><a th:href="@{/bird(id=${bird.id})}" th:text="${bird.name}">Bird Name...</a></li>
+            <li th:each="bird: ${birds}"><a th:href="@{/bird(id=${bird.id})}" th:text="${bird.name}"></a></li>
         </ul>
     </div>
     <Footer>JAC Enterprises 2022</Footer>

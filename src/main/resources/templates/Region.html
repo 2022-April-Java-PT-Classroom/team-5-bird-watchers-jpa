@@ -17,7 +17,7 @@
 
 </nav>
 <header>
-    <h1 th:text="${region.regionName}"></h1>
+    <h1 th:text="${region.regionName} + '' + ${region.countryName}"></h1>
 </header>
 <main>
     <div id="intro">

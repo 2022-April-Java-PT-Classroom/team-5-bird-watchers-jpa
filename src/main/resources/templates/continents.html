@@ -16,13 +16,22 @@
     </header>
     <div>
         <nav id="navBar">
+
             <a href="home">Home</a>
+
             <a href="birds">List of Birds</a>
             <a hfre="habitatsTemplate">Habitats</a>
+
+            <a href="continent">Continent</a>
+
             <a href="regions">Regions of South America</a>
         </nav>
         <ul>
-            <li th:each="continent: ${continents}"><a th:href="@{/continent(id=${continent.id})}" th:text="${continent.name}">Continent Name...</a></li>
+            <li th:each="continent: ${continents}"><a th:href="@{/continent(id=${continent.id})}" th:text="${continent.name}"></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur lorem donec massa sapien faucibus. Sit amet consectetur adipiscing elit pellentesque. Tellus at urna condimentum mattis pellentesque id. Libero volutpat sed cras ornare arcu.
+                Aliquam nulla facilisi cras fermentum odio. Turpis egestas sed tempus urna et pharetra </p>
+            </li>
+
         </ul>
     </div>
     <Footer>JAC Enterprises 2022</Footer>

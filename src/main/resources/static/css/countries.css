@@ -20,3 +20,11 @@
     color: var(--secondary-color);
     font-size: 1em;
 }
+footer {
+    justify-content: center;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    background-color: rgb(64, 75, 80);
+    color: cornflowerblue;
+}

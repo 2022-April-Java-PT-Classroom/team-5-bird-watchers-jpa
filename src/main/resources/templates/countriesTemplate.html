@@ -9,6 +9,20 @@
     <title>countries</title>
 </head>
 <body>
+<header>
+    <nav id="navBar">
+        <a href="home">Home</a>
+        <a href="Region">Region</a>
+        <a href="Continent"> Continent</a>
+    </nav>
+    <h1>Countries Available for Bird Watching</h1>
+</header>
+<div>
+    <ul>
+        <li th:each="country: ${countries}"><a th:href="@{/country(id=${country.id})}" th:text="${country.name}">Country  Name...</a></li>
+    </ul>
+</div>
    <h1>countries</h1>
 </body>
+<Footer>JAC Enterprises 2022</Footer>
 </html>

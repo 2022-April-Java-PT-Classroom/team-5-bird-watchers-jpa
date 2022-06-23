@@ -12,6 +12,12 @@
 <header>
     <h1>Country Available for Bird Watching</h1>
 </header>
+
+    <nav id="navBar">
+        <a href="home">Home</a>
+        <a href="continents">South America</a>
+    </nav>
+    <h1>Countries Available for Bird Watching</h1>
 <div>
     <ul>
         <li th:each="country: ${countries}"><a th:href="@{/country(id=${country.id})}" th:text="${country.name}">Country  Name...</a></li>

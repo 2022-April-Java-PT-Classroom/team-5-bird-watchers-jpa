@@ -21,7 +21,7 @@ public class habitatModel {
     @ManyToMany
     private Collection<BirdModel> birds;
 
-    private Long getId(){
+    public Long getId(){
         return id;
     }
 

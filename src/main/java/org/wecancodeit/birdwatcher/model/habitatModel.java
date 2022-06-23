@@ -1,7 +1,6 @@
 package org.wecancodeit.birdwatcher.model;
 
 import javax.persistence.*;
-import javax.swing.plaf.synth.Region;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -37,6 +36,7 @@ public class habitatModel {
     public String getImageUrl(){
         return imageUrl;
     }
+
     public regionModel getRegion(){
         return region;
     }
@@ -50,7 +50,7 @@ public class habitatModel {
     }
 
 
-    public habitatModel(Long id, String habitatName, String description, String imageUrl, regionModel region, BirdModel... birds){
+    public habitatModel(String habitatName, String description, String imageUrl, regionModel region, BirdModel... birds){
 
        this.id = id;
        this.habitatName = habitatName;

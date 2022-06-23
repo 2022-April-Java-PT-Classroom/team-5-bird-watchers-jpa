@@ -2,35 +2,64 @@ package org.wecancodeit.birdwatcher;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import org.wecancodeit.birdwatcher.model.regionModel;
-import org.wecancodeit.birdwatcher.repo.RegionRepository;
+import org.wecancodeit.birdwatcher.model.*;
+import org.wecancodeit.birdwatcher.repo.*;
 
 import javax.annotation.Resource;
-import javax.swing.plaf.synth.Region;
 
 @Component
 public class Populator implements CommandLineRunner {
 
     @Resource
+    private ContinentRepository continentRepo;
+
+    @Resource
+    private countriesRepository countriesRepo;
+
+    @Resource
     private RegionRepository regionRepo;
+
+    @Resource
+    private habitatRepository habitatRepo;
+
+    @Resource
+    private BirdRepository birdRepo;
 
     @Override
     public void run(String...args) throws Exception {
+        ContinentModel southamerica = new ContinentModel("South America", "description", "image");
+        continentRepo.save(southamerica);
 
+        countriesModel chile = new countriesModel("Chile", "description", "Image", southamerica);
+        countriesModel argentina = new countriesModel("Argentina", "description", "Image", southamerica);
+        countriesRepo.save(chile);
+        countriesRepo.save(argentina);
 
-        regionModel patagonia = new regionModel("Patagonia","Argentina", "About 2 Million","cold and dry", "/images/South America/Patagonia.png");
+        regionModel patagonia = new regionModel("Patagonia","Argentina", "About 2 Million","cold and dry", "/images/South America/Patagonia.png", argentina);
+        regionModel aysen = new regionModel("Aysen", "Chile", "102,317", "Cool Oceanic", "/images/Province/Aysen_Chile/Aysen_in_Chile_2018.png", chile);
+        regionModel losLagos = new regionModel("Los Lagos","Chile", "823,204", "Tropical Savanna", "/images/Province/Los_Lagos_Chile/Los_Lagos_in_Chile_2018.png",chile);
+        regionModel magallanes = new regionModel("Magallanes", "Chile", "165,5932", "Tundra", "/images/Province/Magallanes_Chile/Magallanes_and_Antartica_Chilena_in_Chile.png", chile);
         regionRepo.save(patagonia);
-
-        regionModel aysen = new regionModel("Aysen", "Chile", "102,317", "Cool Oceanic", "/images/Province/Aysen_Chile/Aysen_in_Chile_2018.png");
         regionRepo.save(aysen);
-
-        regionModel losLagos = new regionModel("Los Lagos","Chile", "823,204", "Tropical Savanna", "/images/Province/Los_Lagos_Chile/Los_Lagos_in_Chile_2018.png");
         regionRepo.save(losLagos);
-
-        regionModel magallanes = new regionModel("Magallanes", "Chile", "165,5932", "Tundra", "/images/Province/Magallanes_Chile/Magallanes_and_Antartica_Chilena_in_Chile.png");
         regionRepo.save(magallanes);
 
+        habitatModel habitat1= new habitatModel("habitatName", "description", "imageUrl", patagonia);
+        habitatModel habitat2= new habitatModel("habitatName", "description", "imageUrl", aysen);
+        habitatModel habitat3= new habitatModel("habitatName","description","imageUrl", losLagos);
+        habitatModel habitat4= new habitatModel("habitatName", "description", "imageUrl", magallanes);
+        habitatRepo.save(habitat1);
+        habitatRepo.save(habitat2);
+        habitatRepo.save(habitat3);
+        habitatRepo.save(habitat4);
 
-
+        BirdModel bird1 = new BirdModel("BirdName", "description", "imageUrl", habitat1);
+        BirdModel bird2 = new BirdModel("BirdName", "description", "imageUrl", habitat2);
+        BirdModel bird3 = new BirdModel("BirdName", "description", "imageUrl", habitat3);
+        BirdModel bird4 = new BirdModel("BirdName", "description", "imageUrl", habitat4);
+        birdRepo.save(bird1);
+        birdRepo.save(bird2);
+        birdRepo.save(bird3);
+        birdRepo.save(bird4);
     }
 }

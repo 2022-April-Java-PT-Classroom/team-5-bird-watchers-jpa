@@ -48,7 +48,7 @@ public class countriesModel {
 
     }
 
-    public countriesModel(Long id, String countryName, String description, String imageUrl, ContinentModel continent, regionModel ... regions){
+    public countriesModel(String countryName, String description, String imageUrl, ContinentModel continent, regionModel ... regions){
         this.id = id;
         this.countryName = countryName;
         this.description = description;

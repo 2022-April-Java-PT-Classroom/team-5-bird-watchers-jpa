@@ -10,11 +10,16 @@
 </head>
 <body>
 <header>
+    <nav id="navBar">
+        <a href="continents">Continent List</a>
+        <a href="HabitatsTemplate">Habitats</a>
+    </nav>
     <h1>Habitat for Bird Watching</h1>
 </header>
 <div>
     <ul>
-        <li th:each="habitat: ${habitats}"><a th:href="@{/habitat(id=${habitat.id})}" th:text="${habitat.name}">Habitat  Name...</a></li>
+        <li th:each="habitat: ${habitats}"><a th:href="@{/habitats/${habitat.id}}" th:text="${habitat.name}">Habitat  Name...</a></li>
+        <img th:src="${habitat.imageUrl}" alt="No Image">
     </ul>
 </div>
 <Footer>JAC Enterprises 2022</Footer>

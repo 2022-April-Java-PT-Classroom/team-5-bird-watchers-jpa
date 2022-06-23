@@ -44,19 +44,19 @@ public class Populator implements CommandLineRunner {
         regionRepo.save(losLagos);
         regionRepo.save(magallanes);
 
-        habitatModel habitat1= new habitatModel("habitatName", "description", "imageUrl", patagonia);
-        habitatModel habitat2= new habitatModel("habitatName", "description", "imageUrl", aysen);
-        habitatModel habitat3= new habitatModel("habitatName","description","imageUrl", losLagos);
-        habitatModel habitat4= new habitatModel("habitatName", "description", "imageUrl", magallanes);
+        habitatModel habitat1= new habitatModel("Andean", "rocky, mountainous areas", "images/Birds/Andean_Condor/AndeanMap.png", patagonia);
+        habitatModel habitat2= new habitatModel("Austral", "wooded country, but also shrubland and farmland", "/images/Birds/Austral_Parakeet/Enicognathus_ferrugineus_map.svg.png", aysen);
+        habitatModel habitat3= new habitatModel("Chilean","salt lagoons and soda lakes","/images/Birds/Chilean_Flamingo/800px-Phoenicopterus_chilensis_map.png", losLagos);
+        habitatModel habitat4= new habitatModel("Magallanes", "Arctic coast", "/images/Birds/Magellanic_Penguin/Spheniscus_magellanicus_map.png", magallanes);
         habitatRepo.save(habitat1);
         habitatRepo.save(habitat2);
         habitatRepo.save(habitat3);
         habitatRepo.save(habitat4);
 
-        BirdModel bird1 = new BirdModel("BirdName", "description", "imageUrl", habitat1);
-        BirdModel bird2 = new BirdModel("BirdName", "description", "imageUrl", habitat2);
-        BirdModel bird3 = new BirdModel("BirdName", "description", "imageUrl", habitat3);
-        BirdModel bird4 = new BirdModel("BirdName", "description", "imageUrl", habitat4);
+        BirdModel bird1 = new BirdModel("Condor", "The Andean condor is the largest living land bird capable of flight", "/images/Birds/Andean_Condor/Andean_condor.jpg", habitat1);
+        BirdModel bird2 = new BirdModel("Parakeet", "There are two recognized subspecies.", "/images/Birds/Austral_Parakeet/Austral_Parakeet.jpg", habitat2);
+        BirdModel bird3 = new BirdModel("Flamingo", "Pink Floyd the Flamingo", "/images/Birds/Chilean_Flamingo/Chilenischer_Flamingo.jpg", habitat3);
+        BirdModel bird4 = new BirdModel("Penguin", "Argentina, Chile, and the Falkland Islands", "/images/Birds/Magellanic_Penguin/Magellanic_penguin.jpg", habitat4);
         birdRepo.save(bird1);
         birdRepo.save(bird2);
         birdRepo.save(bird3);

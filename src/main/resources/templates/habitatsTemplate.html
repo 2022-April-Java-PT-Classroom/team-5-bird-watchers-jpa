@@ -10,6 +10,20 @@
     <title>Habitats</title>
 </head>
 <body>
-    <h1>Habitats</h1>
+<h1>Habitats</h1>
+<nav id="navBar">
+    <a href="#top">Home</a>
+    <a href="#birds">Brirds</a>
+    <a href="continents">Continents</a>
+</nav>
+<header>
+    <div class="grid">
+        <ul>
+            <li th:each="habitat: ${habitats}"><a th:href="@{/habitat(id=${habitat.id})}" th:text="${habitat.habitatName}"></a></li>
+        </ul>
+    </div>
+
+</header>
+<Footer>JAC Enterprises 2022</Footer>
 </body>
 </html>

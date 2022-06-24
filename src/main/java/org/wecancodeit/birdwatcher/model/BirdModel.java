@@ -1,5 +1,7 @@
 package org.wecancodeit.birdwatcher.model;
 
+import org.springframework.stereotype.Service;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Arrays;

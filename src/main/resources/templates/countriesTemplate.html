@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/css/countries.css">
-    <link rel="stylesheet" href="../style/css/landingLayout.css">
-    <title>countries</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/countries.css">
+    <link rel="stylesheet" href="/css/landingLayout.css">
+    <title>Countries</title>
 </head>
 <body>
-   <h1>countries</h1>
+<header>
+    <nav id="navBar">
+        <a href="home">Home</a>
+        <a href="regions">Region List</a>
+        <a href="continents">Continent List</a>
+    </nav>
+    <h1>Countries Available for Bird Watching</h1>
+</header>
+<div>
+    <ul>
+        <li th:each="country: ${countries}"><a th:href="@{/country(id=${country.id})}" th:text="${country.countryName}">Country  Name...</a></li>
+    </ul>
+</div>
 </body>
+<Footer>JAC Enterprises 2022</Footer>
 </html>

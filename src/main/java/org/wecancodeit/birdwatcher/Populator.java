@@ -30,8 +30,8 @@ public class Populator implements CommandLineRunner {
         ContinentModel southamerica = new ContinentModel("South America", "description", "image");
         continentRepo.save(southamerica);
 
-        countriesModel chile = new countriesModel("Chile", "description", "Image", southamerica);
-        countriesModel argentina = new countriesModel("Argentina", "description", "Image", southamerica);
+        countriesModel chile = new countriesModel("Chile", "description", "/images/Province/Aysen_Chile/Aysen.jpg", southamerica);
+        countriesModel argentina = new countriesModel("Argentina", "description", "/images/Province/Chubut_Argentina/Chubut.jpg", southamerica);
         countriesRepo.save(chile);
         countriesRepo.save(argentina);
 

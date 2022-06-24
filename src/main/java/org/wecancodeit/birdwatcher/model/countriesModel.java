@@ -24,7 +24,7 @@ public class countriesModel {
         return id;
     }
 
-    public String getName() {
+    public String getCountryName() {
         return countryName;
     }
 

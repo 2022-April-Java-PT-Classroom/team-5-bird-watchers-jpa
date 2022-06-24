@@ -6,17 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{css/style.css}">
     <link rel="stylesheet" th:href="@{css/landingLayout.css}">
-    <title>Country</title>
+    <title th:text="${countriesModel.countryName}"></title>
 </head>
 <body>
 <header>
-    <h1>Country Available for Bird Watching</h1>
+    <h1 th:text="${countriesModel.countryName}"></h1>
+    <nav id="navBar">
+        <a href="home">Home</a>
+        <a th:href="@{/continent(id=${countriesModel.continent.id})}" th:text="${countriesModel.continent.name}"></a>
+        <a href="countries">Countries List</a>
+    </nav>
 </header>
-<div>
-    <ul>
-        <li th:each="country: ${countries}"><a th:href="@{/country(id=${country.id})}" th:text="${country.name}">Country  Name...</a></li>
-    </ul>
-</div>
+<main>
+    <div>
+        <img th:src="${countriesModel.imageUrl}">
+        <p th:text="${countriesModel.description}"></p>
+    </div>
+    <div>
+        <h2 th:text="'Regions of ' + ${countriesModel.countryName}"></h2>
+        <ul>
+            <li th:each="region: ${countriesModel.regions}"><a th:href="@{/region(id=${region.id})}" th:text="${region.regionName}"></a></li>
+        </ul>
+    </div>
+</main>
 <Footer>JAC Enterprises 2022</Footer>
 </body>
 </html>

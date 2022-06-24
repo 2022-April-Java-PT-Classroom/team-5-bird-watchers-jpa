@@ -18,11 +18,24 @@
     </nav>
     <h1>Countries Available for Bird Watching</h1>
 </header>
+
 <div>
     <ul>
         <li th:each="country: ${countries}"><a th:href="@{/country(id=${country.id})}" th:text="${country.countryName}">Country  Name...</a></li>
     </ul>
 </div>
+<div id="sout">
+    <h2 id="Buenos">Buenos dias </h2>
+
+    <div id="pic ">
+        <div class="gallery">
+            <figure>
+                <img src=".\images\chilepic.jpg">
+                <img src=".\images\argintinapic.jpg">
+            </figure>
+            <div class="desc">Aliquam nulla facilisi cras fermentum odio. Turpis egestas sed tempus urna et pharetra pharetra massa massa. Scelerisque fermentum dui faucibus in ornare quam. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. Faucibus pulvinar elementum integer.</div>
+        </div>
+    </div>
 </body>
 <Footer>JAC Enterprises 2022</Footer>
 </html>

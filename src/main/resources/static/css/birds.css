@@ -20,6 +20,33 @@
     color: var(--secondary-color);
     font-size: 1em;
 }
+h2#Buenos{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 37px;
+    padding-left: 10em;
+    text-align: center;
+  }
+
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  div.gallery figure img {
+    border-radius: 50%;
+    -webkit-box-reflect: right;
+    width: 50%;
+    height: auto;
+  }
+
+  div.desc {
+    padding-top: 2em;
+    padding-left: 10em;
+    padding-right: 10em;
+    padding-bottom: 1em;
+    padding: 15px;
+    text-align: center;
+  }
+
+
 footer {
     justify-content: center;
     text-align: center;

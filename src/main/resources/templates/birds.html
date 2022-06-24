@@ -3,22 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" th:href="@{css/style.css}">
+    <link rel="stylesheet" th:href="@{css/birds.css}">
     <link rel="stylesheet" th:href="@{css/landingLayout.css}">
     <title>Birds</title>
 </head>
 <body>
-    <header>
+      <header>
         <nav id="navBar">
             <a href="home">Home</a>
             <a href="continents">Continents</a>
         </nav>
         <h1>Birds</h1>
-    </header>
-    <div>
+     </header>
+     <div>
         <ul>
             <li th:each="bird: ${birds}"><a th:href="@{/bird(id=${bird.id})}" th:text="${bird.name}"></a></li>
         </ul>
     </div>
-    <Footer>JAC Enterprises 2022</Footer>
-</body>
+    <div id="sout">
+        <h2 id="Buenos">Beautiful birds </h2>
+        <div id="pic ">
+            <div class="gallery">
+                <figure>
+                    <img src=".\images\chilebrd.jpg">
+                    <img src=".\images\argbirhab.jpg">
+                </figure>
+                <div class="desc">Aliquam nulla facilisi cras fermentum odio. Turpis egestas sed tempus urna et pharetra pharetra massa massa. Scelerisque fermentum dui faucibus in ornare quam. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. Faucibus pulvinar elementum integer.</div>
+            </div>
+        </div>
+
+
+     <Footer>JAC Enterprises 2022</Footer>
+ </body>
 </html>
